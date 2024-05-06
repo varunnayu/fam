@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Tree</title>
+    <link rel="stylesheet" href="fam.css">
+</head>
+<body>
+
+    <div class="tree">
+        <div class="person father">
+            <img src="dad.jpg" alt="Father" data-info="Thippeswamy K, Father">
+            <div class="info">John Doe, Father</div>
+            <div class="name">Father</div>
+            <div class="children">
+                <div class="person mother">
+                    <img src="mom.jpg" alt="Mother" data-info="Swetha S, Mother">
+                    <div class="info">Jane Doe, Mother</div>
+                    <div class="name">Mother</div>
+                    <div class="children">
+                        <div class="person son">
+                            <img src="varun.jpg" alt="Son" data-info="Varun K T, Son">
+                            <div class="info">Sam Doe, Son</div>
+                            <div class="name">Son</div>
+                        </div>
+                        <div class="person daughter">
+                            <img src="nayu.jpg" alt="Daughter" data-info="Nayana K T, Daughter">
+                            <div class="info">Emily Doe, Daughter</div>
+                            <div class="name">Daughter</div>0
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="selectedPerson" class="selected-person">
+        <div class="card">
+            <img id="selectedPersonImage" src="" alt="">
+            <div id="selectedPersonInfo" class="info"></div>
+        </div>
+    </div>
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    const persons = document.querySelectorAll(".person");
+    const selectedPersonImage = document.getElementById("selectedPersonImage");
+    const selectedPersonInfo = document.getElementById("selectedPersonInfo");
+
+    persons.forEach(person => {
+        person.addEventListener("click", function(event) {
+            event.stopPropagation(); // Prevents the click from bubbling up to parent nodes
+            const info = this.querySelector(".info");
+            if (info) {
+                selectedPersonImage.src = this.querySelector("img").src;
+                selectedPersonInfo.textContent = info.textContent;
+            }
+            this.classList.toggle("open");
+        });
+    });
+
+    // Close selected person card when clicking outside
+    document.addEventListener("click", function(event) {
+        const selectedPerson = document.getElementById("selectedPerson");
+        if (!selectedPerson.contains(event.target)) {
+            selectedPersonImage.src = "";
+            selectedPersonInfo.textContent = "";
+        }
+    });
+});
+
+
+</script>
+</body>
+</html>

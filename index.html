@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar with Hamburger Menu</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="logo.png" alt="Logo"></a>
+      <div class="menu-toggle">
+        <div class="hamburger"></div>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ourfamily.html">Our Family's</a></li>
+        <li><a href="function.html">Function,s</a></li>
+        <li><a href="galarrey.html">Gallery</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Our <span>Family</span> ❤️</h1>
+      <p>"Family is not just an important thing, it's everything. It's where we find love, support, and belonging.
+         Cherish every moment with your loved ones, for they are the true treasures of life."</p><br>
+         <p> <strong>"ಕುಟುಂಬ ಅತ್ಯಂತ ಮುಖ್ಯವಲ್ಲದೆ, ಅದು ಎಲ್ಲವನ್ನೂ ಅರ್ಥಮಾಡುವ ಒಂದು ವಿಶೇಷವಾದ ವಿಷಯ. ಅಲ್ಲಿ 
+        ನಾವು ಪ್ರೀತಿ, ಬೆಂಬಲ, ಮತ್ತು ಸೇರಿಕೆಯನ್ನು ಹುಡುಕುತ್ತೇವೆ. ನಿಮ್ಮ ಪ್ರಿಯರೊಂದಿಗೆ ಎಲ್ಲ
+        ಕ್ಷಣಗಳನ್ನು ಸಂತೋಷದಿಂದ ಕಳೆಯಿರಿ, ಏಕೆಂದರೆ ಅವರು ಜೀವನದ ನಿಜವಾದ ಬಂಧನಗಳು."</p></strong>
+    </div>
+  </section>
+
+
+
+  <h2>Our Beloved <span>Family</span>Members</h2>
+
+<div class="slideshow-container">
+<div class="mySlides fade">
+  <div class="numbertext">1 / 2</div>
+  <img src="fam1.jpg" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">2 / 2</div>
+  <img src="fam1.jpg" style="width:100%">
+</div>
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+<br>
+
+
+<footer class="footer">
+    <div>
+      <strong><p>Made with <a href="#">🫶</a></p></strong>
+    </div>
+</footer>
+
+
+
+
+
+
+
+<script src="script.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+  
+    menuToggle.addEventListener('click', function() {
+      navMenu.classList.toggle('active');
+    });
+  });
+  
+  </script>
+</body>
+</html>

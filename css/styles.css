@@ -1,0 +1,223 @@
+/* Resetting default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styles for navbar */
+.navbar {
+  background-color: #f4deff;
+  padding: 10px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-menu li {
+  margin-left: 20px;
+}
+
+.nav-menu li a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Logo styles */
+.logo img {
+  max-width: 100px; /* Adjust according to your logo size */
+}
+
+/* Hamburger menu styles */
+.menu-toggle {
+  cursor: pointer;
+  display: none; /* Initially hidden for non-responsive */
+}
+
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background-color: #000000;
+  margin: 5px 0;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-basis: 100%;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    margin: 0;
+  }
+
+  .menu-toggle {
+    display: block; /* Show hamburger icon for small screens */
+  }
+}
+
+/* Resetting default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styles for hero section */
+.hero {
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+span{
+    color: #06a4ff;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+h2{
+  text-align: center;
+  padding-bottom: 40px;
+  font-size: 30px;
+}
+p {
+  font-size: 1.2rem;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/*footer*/
+/* Basic styles for footer */
+.footer {
+  background-color: #f4deff;
+  color: #000000;
+  padding: 30px;
+}
+p {
+  text-align: center;
+  font-size: 20px;
+}
+a{
+    text-decoration: none;
+}
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .footer {
+    font-size: 14px;
+  }
+}
